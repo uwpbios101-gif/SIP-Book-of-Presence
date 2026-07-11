@@ -1,0 +1,44 @@
+{
+  "edition": "Prototype 01",
+  "updated": "2026-07-11",
+  "notice": "Concept content only. Final recipes, prices, dietary indicators, and availability require SIP approval.",
+  "collections": [
+    {
+      "id": "house-signatures",
+      "name": "House Signatures",
+      "description": "The permanent icons of SIP.",
+      "drinks": [
+        {
+          "id": "presence",
+          "name": "Presence",
+          "number": "01",
+          "identity": "Dark fruit. Burnished spice. Smoked citrus.",
+          "description": "A slow, architectural composition designed to arrive quietly and remain in memory.",
+          "status": "House Icon",
+          "prototype": true,
+          "tastingDirection": ["blackberry", "allspice", "black tea", "charred orange"],
+          "pairingDirection": ["jerk-spiced vegetables", "roasted mushroom", "dark cacao"],
+          "profile": { "sweetness": 2, "citrus": 3, "herbal": 4, "body": 5 }
+        },
+        {
+          "id": "clarity",
+          "name": "Clarity",
+          "number": "02",
+          "prototype": true
+        },
+        {
+          "id": "legacy",
+          "name": "Legacy",
+          "number": "03",
+          "prototype": true
+        },
+        {
+          "id": "renaissance",
+          "name": "Renaissance",
+          "number": "04",
+          "prototype": true
+        }
+      ]
+    }
+  ]
+}
