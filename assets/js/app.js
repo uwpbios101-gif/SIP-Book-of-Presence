@@ -17,7 +17,7 @@
   const toast = document.getElementById('toast');
   const mobileReader = document.getElementById('mobileReader');
 
-  const labels = ['Cover', 'Welcome', 'Contents', 'House Signatures', 'Presence', 'Clarity', 'Next Signatures', 'Back Cover'];
+  const labels = ['Cover', 'Welcome', 'Contents', 'House Signatures', 'Presence', 'Clarity', 'Legacy', 'Renaissance', 'The Permanent Four', 'Back Cover'];
   const searchIndex = [
     { title: 'The Book of Presence', subtitle: 'Cover', page: 0 },
     { title: 'Welcome to SIP', subtitle: 'Presence is the product', page: 1 },
@@ -25,11 +25,13 @@
     { title: 'House Signatures', subtitle: 'Collection I · four permanent compositions', page: 3 },
     { title: 'Presence', subtitle: 'Blackberry · Assam black tea · charred orange · allspice', page: 4 },
     { title: 'Clarity', subtitle: 'Green grape · cucumber · white tea · citrus blossom', page: 5 },
-    { title: 'Legacy and Renaissance', subtitle: 'The next House Signatures in development', page: 6 },
-    { title: 'SIP South Holland', subtitle: 'Address, phone, and reservations', page: 7 }
+    { title: 'Legacy', subtitle: 'Jamaican sorrel · roasted ginger · pimento · blood orange', page: 6 },
+    { title: 'Renaissance', subtitle: 'Pink guava · passion fruit · hibiscus · lime', page: 7 },
+    { title: 'The Permanent Four', subtitle: 'The complete House Signatures collection', page: 8 },
+    { title: 'SIP South Holland', subtitle: 'Address, phone, and reservations', page: 9 }
   ];
 
-  const pageHashes = ['cover','welcome','contents','house-signatures','presence','clarity','next-signatures','back-cover'];
+  const pageHashes = ['cover','welcome','contents','house-signatures','presence','clarity','legacy','renaissance','permanent-four','back-cover'];
   const initialHash = window.location.hash.replace('#','').toLowerCase();
   let currentPage = Math.max(0, pageHashes.indexOf(initialHash));
   let soundEnabled = false;
@@ -51,7 +53,7 @@
     prevButton.disabled = currentPage === 0;
     nextButton.disabled = currentPage === labels.length - 1;
 
-    const activeTarget = currentPage === 6 ? 3 : currentPage;
+    const activeTarget = currentPage === 8 ? 3 : currentPage;
     document.querySelectorAll('.chapter-nav button').forEach(btn => {
       btn.classList.toggle('is-active', Number(btn.dataset.go) === activeTarget);
     });
@@ -202,7 +204,7 @@
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', async () => {
       try {
-        const registration = await navigator.serviceWorker.register('./service-worker.js?v=4.0.0');
+        const registration = await navigator.serviceWorker.register('./service-worker.js?v=5.0.0');
         registration.update();
       } catch (_) {}
     });

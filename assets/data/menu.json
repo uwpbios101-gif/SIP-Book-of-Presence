@@ -1,12 +1,12 @@
 {
-  "edition": "House Signatures · Presence & Clarity",
+  "edition": "Complete House Signatures Collection",
   "updated": "2026-07-11",
   "notice": "Public menu content. Prices, availability, and dietary indicators remain to be added after operational approval.",
   "collections": [
     {
       "id": "house-signatures",
       "name": "House Signatures",
-      "description": "Permanent compositions that carry the clearest expression of SIP.",
+      "description": "Four permanent compositions that carry the clearest expression of SIP.",
       "drinks": [
         {
           "id": "presence",
@@ -90,15 +90,79 @@
           "id": "legacy",
           "name": "Legacy",
           "number": "03",
-          "direction": "Sorrel · ginger · pimento · citrus · aromatic spice",
-          "status": "In development"
+          "tagline": "Heritage, carried forward.",
+          "menuLine": "Jamaican Sorrel · Roasted Ginger · Pimento · Blood Orange · Bay Leaf",
+          "description": "Jamaican sorrel opens with deep ruby fruit, while roasted ginger, pimento, and bay leaf build warmth beneath a polished blood-orange finish. Familiar in memory, elevated in form.",
+          "closingLine": "Honor what shaped you. Carry it forward.",
+          "status": "House Icon",
+          "publicIngredients": [
+            "Jamaican sorrel reduction",
+            "Roasted-ginger cordial",
+            "Pimento and bay-leaf infusion",
+            "Fresh lime",
+            "Blood-orange oleo syrup",
+            "Sparkling mineral water",
+            "Sea-salt solution"
+          ],
+          "glassware": "Stemmed crystal goblet",
+          "ice": "One carved clear sphere",
+          "garnish": "Sorrel bloom and a thin flamed blood-orange coin",
+          "experience": {
+            "aroma": "Sorrel, roasted ginger, citrus oils",
+            "firstImpression": "Deep ruby fruit",
+            "midPalate": "Pimento warmth and bay-leaf structure",
+            "finish": "Polished citrus, dry aromatic spice",
+            "mood": "Rooted, warm, resonant"
+          },
+          "pairing": "Jerk cauliflower steak with coconut rundown and escovitch vegetables",
+          "profile": {
+            "sweetness": 3,
+            "citrus": 3,
+            "herbal": 3.5,
+            "body": 3.5,
+            "effervescence": 2.5
+          },
+          "price": null,
+          "availability": "Coming with SIP opening menu"
         },
         {
           "id": "renaissance",
           "name": "Renaissance",
           "number": "04",
-          "direction": "Guava · passion fruit · hibiscus · lime · gentle spice",
-          "status": "In development"
+          "tagline": "Becoming, beautifully.",
+          "menuLine": "Pink Guava · Passion Fruit · Hibiscus · Lime · Pink Peppercorn",
+          "description": "Guava and passion fruit arrive vivid, hibiscus and lime give the composition lift, and a whisper of pink peppercorn extends the finish. Bright without becoming sweet; expressive without losing its poise.",
+          "closingLine": "Become more of who you came to be.",
+          "status": "House Icon",
+          "publicIngredients": [
+            "Pink-guava cordial",
+            "Fresh passion fruit",
+            "Hibiscus tea",
+            "Fresh lime",
+            "Pink-peppercorn syrup",
+            "Sparkling mineral water",
+            "Sea-salt solution"
+          ],
+          "glassware": "Wide crystal coupe",
+          "ice": "Two hand-cut clear facets",
+          "garnish": "Fine lime spiral and one small hibiscus bloom",
+          "experience": {
+            "aroma": "Guava perfume, passion fruit, fresh lime",
+            "firstImpression": "Vivid tropical fruit and bright acidity",
+            "midPalate": "Floral hibiscus with restrained sweetness",
+            "finish": "Dry sparkle and a whisper of pink peppercorn",
+            "mood": "Bright, expressive, transformative"
+          },
+          "pairing": "King oyster mushroom scallops with mango-pepper relish and coconut-lime purée",
+          "profile": {
+            "sweetness": 3,
+            "citrus": 4,
+            "herbal": 2.5,
+            "body": 3,
+            "effervescence": 4
+          },
+          "price": null,
+          "availability": "Coming with SIP opening menu"
         }
       ]
     }
