@@ -1,0 +1,12 @@
+EDITION 6.5 REPAIR
+
+Root cause fixed:
+- The code changed paper z-index values but never rotated a paper after it was marked flipped.
+- As a result, only front/even pages appeared and back/odd pages were effectively unreachable.
+
+Corrections:
+- Added the missing rotateY(-180deg) page-turn transform.
+- Added current-page and companion-page state so both sides of each spread are visible and understandable.
+- Tightened category layouts at 761–1250px to prevent card/title clipping.
+- Preserved the smartphone single-page reader.
+- Bumped cache version to 6.5 so browsers fetch the repair.

@@ -1,9 +1,9 @@
-const CACHE = 'sip-book-of-presence-v6-2-batch-2-photography';
+const CACHE = 'sip-book-of-presence-v6-5-flipbook-repair';
 const CORE = [
   './',
   './index.html',
-  './assets/css/styles.css?v=6.1.0',
-  './assets/js/app.js?v=6.0.0',
+  './assets/css/styles.css?v=6.5.0',
+  './assets/js/app.js?v=6.5.0',
   './assets/img/sip-logo.png',
   './assets/img/promotion-ambient.jpg',
   './assets/img/girls-night-ambient.jpg',
@@ -29,7 +29,11 @@ const CORE = [
   './assets/img/18-focus.png',
   './assets/img/19-balance.png',
   './assets/img/20-renewal.png',
-  './manifest.webmanifest?v=6.1.0'
+  './assets/img/21-velvet.png',
+  './assets/img/22-cocoa-ceremony.png',
+  './assets/img/23-harvest-moon.png',
+  './assets/img/24-sunday-best.png',
+  './manifest.webmanifest?v=6.5.0'
 ];
 
 self.addEventListener('install', event => {

@@ -1,0 +1,8 @@
+SIP BOOK OF PRESENCE — COMPLETE PHOTOGRAPHY UPDATE
+
+1. Extract this ZIP outside the GitHub repository.
+2. Copy everything inside this package into the repository root.
+3. Choose Replace the files in the destination.
+4. Confirm index.html is directly in the repository root.
+5. Commit: Complete all 24 linked drink photographs
+6. Push origin.

@@ -4,6 +4,7 @@
   const shell = document.querySelector('.site-shell');
   const book = document.getElementById('flipbook');
   const papers = [...document.querySelectorAll('.paper')];
+  const pages = [...document.querySelectorAll('.paper > .page')];
   const prevButton = document.getElementById('prevButton');
   const nextButton = document.getElementById('nextButton');
   const progressBar = document.getElementById('progressBar');
@@ -33,11 +34,29 @@
     return page === 0 ? 0 : Math.ceil(page / 2);
   }
 
+  function companionPageFor(page) {
+    if (page === 0) return -1;
+    if (page === labels.length - 1) return -1;
+    return page % 2 === 0 ? page - 1 : page + 1;
+  }
+
   function updateBook() {
     const turns = paperStateForPage(currentPage);
     papers.forEach((paper, index) => paper.classList.toggle('flipped', index < turns));
     book.classList.toggle('is-open', turns > 0 && turns < papers.length);
+    book.style.setProperty('--active-turns', String(turns));
     shell.dataset.page = String(currentPage);
+
+    const companionPage = companionPageFor(currentPage);
+    pages.forEach((page, index) => {
+      const isCurrent = index === currentPage;
+      const isCompanion = index === companionPage;
+      page.classList.toggle('is-current-page', isCurrent);
+      page.classList.toggle('is-companion-page', isCompanion);
+      page.setAttribute('aria-hidden', String(!isCurrent && !isCompanion));
+      if (isCurrent) page.setAttribute('aria-current', 'page');
+      else page.removeAttribute('aria-current');
+    });
 
     pageLabel.textContent = labels[currentPage];
     progressBar.style.width = `${((currentPage + 1) / labels.length) * 100}%`;
@@ -193,7 +212,7 @@
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', async () => {
       try {
-        const registration = await navigator.serviceWorker.register('./service-worker.js?v=6.0.0');
+        const registration = await navigator.serviceWorker.register('./service-worker.js?v=6.5.0');
         registration.update();
       } catch (_) {}
     });
