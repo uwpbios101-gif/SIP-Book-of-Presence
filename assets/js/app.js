@@ -7,6 +7,8 @@
   const pages = [...document.querySelectorAll('.paper > .page')];
   const prevButton = document.getElementById('prevButton');
   const nextButton = document.getElementById('nextButton');
+  const cornerPrevButtons = [document.getElementById('prevButtonTL'), document.getElementById('prevButtonBL')].filter(Boolean);
+  const cornerNextButtons = [document.getElementById('nextButtonTR'), document.getElementById('nextButtonBR')].filter(Boolean);
   const progressBar = document.getElementById('progressBar');
   const pageLabel = document.getElementById('pageLabel');
   const soundButton = document.getElementById('soundButton');
@@ -62,6 +64,8 @@
     progressBar.style.width = `${((currentPage + 1) / labels.length) * 100}%`;
     prevButton.disabled = currentPage === 0;
     nextButton.disabled = currentPage === labels.length - 1;
+    cornerPrevButtons.forEach(btn => { btn.disabled = prevButton.disabled; });
+    cornerNextButtons.forEach(btn => { btn.disabled = nextButton.disabled; });
 
     const activeTarget = navTargets[currentPage];
     document.querySelectorAll('.chapter-nav button').forEach(btn => {
@@ -152,6 +156,8 @@
 
   nextButton.addEventListener('click', next);
   prevButton.addEventListener('click', prev);
+  cornerPrevButtons.forEach(btn => btn.addEventListener('click', prev));
+  cornerNextButtons.forEach(btn => btn.addEventListener('click', next));
   mobileJump?.addEventListener('change', event => goTo(event.target.value));
 
   document.addEventListener('click', event => {

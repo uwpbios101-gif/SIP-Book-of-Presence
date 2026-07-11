@@ -1,0 +1,90 @@
+/* =========================================================================
+   SIP — Book of Presence — Layout & Sizing Overrides
+   Loaded after styles.css. Only touches: page size/height, the gap between
+   the navbar and the book, the corner page-turn arrows, and heading sizes.
+   ========================================================================= */
+
+/* 1) Shrink the page/book dimensions so the whole spread renders without
+      forcing the page to scroll. */
+:root {
+  --page-w: min(30vw, 460px);
+  --page-h: calc(var(--page-w) * 1.02);
+}
+
+/* 2) Kill the dead black space between the navbar and the book. The
+      original .experience box had a fixed min-height of 820px and generous
+      top/bottom padding, which centered a much-shorter book inside a much
+      taller box. */
+.experience {
+  min-height: 0;
+  padding: 14px 24px 18px;
+}
+
+.book-stage {
+  gap: 14px;
+}
+
+/* 3) Corner page-turn arrows — one pair per page, top and bottom, sitting
+      on the outer edge of the book (left edge = left page, right edge =
+      right page), matching the layout of a real book. */
+.corner-arrow {
+  position: absolute;
+  z-index: 40;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.corner-arrow svg { width: 16px; }
+
+.corner-prev { left: 10px; }
+.corner-next { right: 10px; }
+.corner-top { top: 10px; }
+.corner-bottom { bottom: 10px; }
+
+/* The mobile reader is a separate single-column view (below 760px) with its
+   own navigation, so hide the book's corner arrows there. */
+@media (max-width: 760px) {
+  .corner-arrow { display: none; }
+}
+
+/* 4) Smaller page headings (e.g. "Presence") so they don't dominate the
+      page. Applies across every page type that uses this heading style. */
+.editorial-page h2,
+.contents-page h2,
+.category-page h2,
+.drink-page h2,
+.signature-preview-page h2,
+.signature-complete-page h2,
+.complete-contents h2,
+.collection-page h2,
+.generated-drink h2,
+.pairing-page h2,
+.order-page h2 {
+  font-size: clamp(24px, 2.3vw, 40px) !important;
+}
+
+@media (max-width: 760px) {
+  .mobile-page .editorial-page h2,
+  .mobile-page .category-page h2,
+  .mobile-page .drink-page h2,
+  .mobile-page .signature-preview-page h2,
+  .mobile-page .signature-complete-page h2,
+  .mobile-page .complete-contents h2,
+  .mobile-page .collection-page h2,
+  .mobile-page .generated-drink h2,
+  .mobile-page .pairing-page h2,
+  .mobile-page .order-page h2 {
+    font-size: 30px !important;
+  }
+}
+
+/* Slightly smaller viewport heights (short laptop screens / landscape
+   tablets) get an extra trim so the book always fits without scrolling. */
+@media (max-height: 760px) and (min-width: 761px) {
+  :root {
+    --page-w: min(26vw, 380px);
+    --page-h: calc(var(--page-w) * 1.02);
+  }
+  .experience { padding: 8px 24px 12px; }
+}
