@@ -1,6 +1,6 @@
 {
-  "edition": "Complete 24-Drink Collection",
-  "version": "6.0",
+  "edition": "Complete 24-Drink Collection · Photography Batch 1",
+  "version": "6.1",
   "updated": "2026-07-11",
   "notice": "Creative and operational development edition. Prices, final availability, allergens, and dietary indicators require SIP approval before service.",
   "collections": [
@@ -72,7 +72,10 @@
           },
           "containsCaffeine": false,
           "price": null,
-          "availability": "Pending opening-menu approval"
+          "availability": "Pending opening-menu approval",
+          "image": "assets/img/01-presence.png",
+          "imageAlt": "Presence zero-proof cocktail with blackberry, charred orange, clear ice, and a gold pick in a cut-crystal rocks glass.",
+          "photographyStatus": "Website asset linked"
         },
         {
           "id": "clarity",
@@ -132,7 +135,10 @@
           },
           "containsCaffeine": false,
           "price": null,
-          "availability": "Pending opening-menu approval"
+          "availability": "Pending opening-menu approval",
+          "image": "assets/img/02-clarity.png",
+          "imageAlt": "Clarity zero-proof cocktail with cucumber ribbon, clear ice spear, and white blossom in a tall crystal highball.",
+          "photographyStatus": "Website asset linked"
         },
         {
           "id": "legacy",
@@ -196,7 +202,10 @@
           },
           "containsCaffeine": false,
           "price": null,
-          "availability": "Pending opening-menu approval"
+          "availability": "Pending opening-menu approval",
+          "image": "assets/img/03-legacy.png",
+          "imageAlt": "Legacy zero-proof sorrel cocktail with a clear ice sphere, dried blood orange, and sorrel garnish in a stemmed crystal goblet.",
+          "photographyStatus": "Website asset linked"
         },
         {
           "id": "renaissance",
@@ -260,7 +269,10 @@
           },
           "containsCaffeine": false,
           "price": null,
-          "availability": "Pending opening-menu approval"
+          "availability": "Pending opening-menu approval",
+          "image": "assets/img/04-renaissance.png",
+          "imageAlt": "Renaissance zero-proof cocktail with guava color, lime spiral, and hibiscus flower in a wide crystal coupe.",
+          "photographyStatus": "Website asset linked"
         }
       ]
     },
@@ -327,7 +339,10 @@
           },
           "containsCaffeine": false,
           "price": null,
-          "availability": "Pending opening-menu approval"
+          "availability": "Pending opening-menu approval",
+          "image": "assets/img/05-the-sovereign.png",
+          "imageAlt": "The Sovereign zero-proof cocktail with dark fruit, charred fig, cacao accents, and clear ice in a faceted rocks glass.",
+          "photographyStatus": "Website asset linked"
         },
         {
           "id": "midnight-gold",
@@ -386,7 +401,10 @@
           },
           "containsCaffeine": false,
           "price": null,
-          "availability": "Pending opening-menu approval"
+          "availability": "Pending opening-menu approval",
+          "image": "assets/img/06-midnight-gold.png",
+          "imageAlt": "Midnight Gold zero-proof cocktail with roasted pineapple, saffron, and a clear ice sphere in an elegant crystal goblet.",
+          "photographyStatus": "Website asset linked"
         },
         {
           "id": "quiet-authority",
@@ -445,7 +463,10 @@
           },
           "containsCaffeine": false,
           "price": null,
-          "availability": "Pending opening-menu approval"
+          "availability": "Pending opening-menu approval",
+          "image": "assets/img/07-quiet-authority.png",
+          "imageAlt": "Quiet Authority zero-proof pear and oolong cocktail with a pear ribbon and green leaf in a crystal coupe.",
+          "photographyStatus": "Website asset linked"
         },
         {
           "id": "afterglow",
@@ -504,7 +525,10 @@
           },
           "containsCaffeine": false,
           "price": null,
-          "availability": "Pending opening-menu approval"
+          "availability": "Pending opening-menu approval",
+          "image": "assets/img/08-afterglow.png",
+          "imageAlt": "Afterglow zero-proof blood orange and apricot cocktail with an orange ribbon in a low crystal coupe.",
+          "photographyStatus": "Website asset linked"
         }
       ]
     },
@@ -571,7 +595,10 @@
           },
           "containsCaffeine": false,
           "price": null,
-          "availability": "Pending opening-menu approval"
+          "availability": "Pending opening-menu approval",
+          "image": "assets/img/09-grounded.png",
+          "imageAlt": "Grounded zero-proof beet and carrot cocktail with pebble ice, carrot ribbon, and thyme in a tall crystal glass.",
+          "photographyStatus": "Website asset linked"
         },
         {
           "id": "provision",
@@ -631,7 +658,10 @@
           },
           "containsCaffeine": false,
           "price": null,
-          "availability": "Pending opening-menu approval"
+          "availability": "Pending opening-menu approval",
+          "image": "assets/img/10-provision.png",
+          "imageAlt": "Provision zero-proof roasted pineapple and tamarind cocktail with a clear cube and pineapple leaf fan in a ceramic tumbler.",
+          "photographyStatus": "Website asset linked"
         },
         {
           "id": "green-wisdom",
@@ -1451,5 +1481,10 @@
         }
       ]
     }
-  ]
+  ],
+  "photography": {
+    "status": "Drinks 01–10 photographed",
+    "imageBasePath": "assets/img/",
+    "nextBatch": "Drinks 11–20"
+  }
 }
