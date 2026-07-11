@@ -45,3 +45,13 @@ The expected website address is:
 ## Content status
 
 Presence is the first developed House Signature. Clarity, Legacy, and Renaissance remain marked as in development until their recipes and editorial systems are approved.
+
+
+## Edition 3.0 corrections
+
+- Direct URL access to `#presence`
+- Prominent “Open Presence” buttons on Contents and House Signatures
+- Clear visual focus when the Presence page is active
+- Versioned CSS/JavaScript files to defeat stale browser caches
+- Network-first service worker so new deployments appear promptly
+- Automatic removal of previous SIP caches

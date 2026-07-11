@@ -4,16 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0a0908">
+  <meta name="sip-edition" content="3.0 · Presence Direct Access">
   <meta name="description" content="The Book of Presence — SIP’s luxury crafted zero-proof collection, beginning with the House Signature Presence.">
   <meta property="og:title" content="The Book of Presence | SIP">
   <meta property="og:description" content="Crafted without compromise. Explore SIP’s luxury zero-proof collection.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/img/promotion-ambient.jpg">
   <title>The Book of Presence | SIP</title>
-  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="manifest" href="manifest.webmanifest?v=3.0.0">
   <link rel="icon" href="assets/img/icon-192.png">
   <link rel="apple-touch-icon" href="assets/img/icon-192.png">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css?v=3.0.0">
 </head>
 <body>
   <a class="skip-link" href="#book">Skip to the menu</a>
@@ -55,7 +56,7 @@
           <div class="binding" aria-hidden="true"></div>
 
           <article class="paper paper-1" data-paper="0">
-            <div class="front page cover-page" data-page-number="1">
+            <div class="front page cover-page" id="cover-page" data-page-number="1">
               <div class="front-content page-content">
                 <div class="cover-grain" aria-hidden="true"></div>
                 <div class="cover-frame" aria-hidden="true"></div>
@@ -72,7 +73,7 @@
                 <p class="cover-footer">Think better. Live better. Gather better.</p>
               </div>
             </div>
-            <div class="back page opening-page" data-page-number="2">
+            <div class="back page opening-page" id="welcome-page" data-page-number="2">
               <div class="back-content page-content editorial-page">
                 <p class="page-kicker">Welcome to SIP</p>
                 <h2>Presence is<br>the product.</h2>
@@ -87,7 +88,7 @@
           </article>
 
           <article class="paper paper-2" data-paper="1">
-            <div class="front page contents-page" data-page-number="3">
+            <div class="front page contents-page" id="contents-page" data-page-number="3">
               <div class="front-content page-content">
                 <p class="page-kicker">The Journey</p>
                 <h2>Contents</h2>
@@ -99,11 +100,14 @@
                   <li><button type="button" data-coming><span>05</span><b>Sparkling Collection</b><em>Bright celebrations</em></button></li>
                   <li><button type="button" data-coming><span>06</span><b>Wellness Elixirs</b><em>Restorative by design</em></button></li>
                 </ol>
-                <p class="prototype-note">House Signature No. 01 is now developed for the collection. Additional beverages will enter category by category as their recipes, language, and presentation are approved.</p>
+                <div class="prototype-note presence-launch">
+                  <p>House Signature No. 01 is fully developed. Open the complete drink page to view its composition, flavor profile, pairing, and visual presentation.</p>
+                  <button class="gold-cta" type="button" data-go="4">Open Presence · House Signature No. 01</button>
+                </div>
                 <p class="folio">03</p>
               </div>
             </div>
-            <div class="back page category-page" data-page-number="4">
+            <div class="back page category-page" id="house-signatures-page" data-page-number="4">
               <div class="back-content page-content">
                 <div class="category-image" role="img" aria-label="Guests celebrating together at SIP"></div>
                 <div class="category-overlay"></div>
@@ -111,6 +115,7 @@
                   <p class="page-kicker">Collection I</p>
                   <h2>House<br>Signatures</h2>
                   <p>Compositions that carry the clearest expression of SIP: memorable without excess, generous without noise, and unmistakable from the first sip.</p>
+                  <button class="gold-cta category-cta" type="button" data-go="4">Explore Presence</button>
                   <div class="category-count"><span>04</span><small>Permanent<br>Compositions</small></div>
                 </div>
                 <p class="folio light">04</p>
@@ -119,7 +124,7 @@
           </article>
 
           <article class="paper paper-3" data-paper="2">
-            <div class="front page drink-page" data-page-number="5">
+            <div class="front page drink-page" id="presence-page" data-page-number="5">
               <div class="front-content page-content">
                 <div class="drink-copy">
                   <p class="page-kicker">House Signature · No. 01</p>
@@ -161,7 +166,7 @@
                 <p class="folio">05</p>
               </div>
             </div>
-            <div class="back page back-cover" data-page-number="6">
+            <div class="back page back-cover" id="back-cover-page" data-page-number="6">
               <div class="back-content page-content">
                 <div class="back-cover-frame" aria-hidden="true"></div>
                 <img src="assets/img/sip-logo.png" alt="SIP — Self-Improvement Philosophy">
@@ -197,7 +202,7 @@
 
     <footer class="site-footer">
       <span>THE BOOK OF PRESENCE</span>
-      <span>House Signatures · Presence</span>
+      <span>House Signatures · Presence · Edition 3.0</span>
       <span>South Holland, Illinois</span>
     </footer>
   </div>
@@ -217,6 +222,6 @@
     <p class="noscript">JavaScript is required for the page-turn experience. Use your browser's print command to view the complete menu.</p>
   </noscript>
 
-  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/app.js?v=3.0.0" defer></script>
 </body>
 </html>

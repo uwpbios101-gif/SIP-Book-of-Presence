@@ -28,7 +28,9 @@
     { title: 'SIP South Holland', subtitle: 'Address, phone, and reservations', page: 5 }
   ];
 
-  let currentPage = 0;
+  const pageHashes = ['cover','welcome','contents','house-signatures','presence','back-cover'];
+  const initialHash = window.location.hash.replace('#','').toLowerCase();
+  let currentPage = Math.max(0, pageHashes.indexOf(initialHash));
   let soundEnabled = false;
   let touchStartX = 0;
   let toastTimer;
@@ -65,6 +67,8 @@
     const next = Math.max(0, Math.min(labels.length - 1, Number(page)));
     if (next === currentPage) return;
     currentPage = next;
+    const hash = pageHashes[currentPage];
+    if (window.location.hash !== `#${hash}`) history.replaceState(null, '', `#${hash}`);
     if (withSound) playPageSound();
     updateBook();
     if (window.innerWidth <= 760) {
@@ -183,8 +187,21 @@
     delta < 0 ? next() : prev();
   }, { passive:true });
 
+  window.addEventListener('hashchange', () => {
+    const requested = pageHashes.indexOf(window.location.hash.replace('#','').toLowerCase());
+    if (requested >= 0 && requested !== currentPage) {
+      currentPage = requested;
+      updateBook();
+    }
+  });
+
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js').catch(() => {}));
+    window.addEventListener('load', async () => {
+      try {
+        const registration = await navigator.serviceWorker.register('./service-worker.js?v=3.0.0');
+        registration.update();
+      } catch (_) {}
+    });
   }
 
   buildMobileReader();
