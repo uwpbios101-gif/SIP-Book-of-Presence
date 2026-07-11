@@ -1,15 +1,15 @@
-const CACHE = 'sip-book-of-presence-v3-direct-access';
+const CACHE = 'sip-book-of-presence-v4-presence-clarity';
 const CORE = [
   './',
   './index.html',
-  './assets/css/styles.css?v=3.0.0',
-  './assets/js/app.js?v=3.0.0',
+  './assets/css/styles.css?v=4.0.0',
+  './assets/js/app.js?v=4.0.0',
   './assets/img/sip-logo.png',
   './assets/img/promotion-ambient.jpg',
   './assets/img/girls-night-ambient.jpg',
   './assets/img/family-ambient.jpg',
   './assets/data/menu.json',
-  './manifest.webmanifest?v=3.0.0'
+  './manifest.webmanifest?v=4.0.0'
 ];
 
 self.addEventListener('install', event => {

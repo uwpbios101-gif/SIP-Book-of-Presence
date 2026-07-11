@@ -1,5 +1,5 @@
 {
-  "edition": "House Signatures · Presence",
+  "edition": "House Signatures · Presence & Clarity",
   "updated": "2026-07-11",
   "notice": "Public menu content. Prices, availability, and dietary indicators remain to be added after operational approval.",
   "collections": [
@@ -51,8 +51,40 @@
           "id": "clarity",
           "name": "Clarity",
           "number": "02",
-          "direction": "Green grape · cucumber · white tea · citrus blossom",
-          "status": "In development"
+          "tagline": "Light, not slight.",
+          "menuLine": "Green Grape · Cucumber · White Tea · Citrus Blossom",
+          "description": "Clarified green grape and cool cucumber meet white tea and citrus blossom in a pale, crystalline composition. Luminous at the opening, quietly floral through the middle, and mineral-dry at the finish.",
+          "closingLine": "See the moment clearly.",
+          "status": "House Icon",
+          "publicIngredients": [
+            "Clarified green-grape cordial",
+            "Fresh cucumber",
+            "Chilled Silver Needle white tea",
+            "Fresh lime",
+            "Citrus-blossom syrup",
+            "Sparkling mineral water",
+            "Sea-salt solution"
+          ],
+          "glassware": "Slender crystal highball",
+          "ice": "One long hand-cut clear spear",
+          "garnish": "Translucent cucumber ribbon and one tiny white edible blossom",
+          "experience": {
+            "aroma": "Cool cucumber, green grape, soft blossom",
+            "firstImpression": "Luminous fruit and clean acidity",
+            "midPalate": "Delicate white tea and restrained florals",
+            "finish": "Dry, mineral, quietly sparkling",
+            "mood": "Clean, luminous, precise"
+          },
+          "pairing": "Callaloo croquettes with green mango and cashew-lime crema",
+          "profile": {
+            "sweetness": 2,
+            "citrus": 2.5,
+            "herbal": 3,
+            "body": 2,
+            "effervescence": 3.5
+          },
+          "price": null,
+          "availability": "Coming with SIP opening menu"
         },
         {
           "id": "legacy",
