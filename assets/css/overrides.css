@@ -4,11 +4,13 @@
    the navbar and the book, the corner page-turn arrows, and heading sizes.
    ========================================================================= */
 
-/* 1) Shrink the page/book dimensions so the whole spread renders without
-      forcing the page to scroll. */
+/* 1) Page height only, trimmed 10% off the original (1.25 -> 1.125
+      multiplier). Width is left at the original value. This is a mild trim,
+      not a drastic one -- text/content sizing inside each page was tuned
+      for the original page proportions, so shrinking further than this
+      causes content to overflow and get clipped at the bottom of the page. */
 :root {
-  --page-w: min(30vw, 460px);
-  --page-h: calc(var(--page-w) * 1.02);
+  --page-h: calc(var(--page-w) * 1.125);
 }
 
 /* 2) Kill the dead black space between the navbar and the book. The
@@ -79,12 +81,3 @@
   }
 }
 
-/* Slightly smaller viewport heights (short laptop screens / landscape
-   tablets) get an extra trim so the book always fits without scrolling. */
-@media (max-height: 760px) and (min-width: 761px) {
-  :root {
-    --page-w: min(26vw, 380px);
-    --page-h: calc(var(--page-w) * 1.02);
-  }
-  .experience { padding: 8px 24px 12px; }
-}
