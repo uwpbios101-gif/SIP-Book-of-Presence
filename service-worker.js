@@ -1,4 +1,4 @@
-const CACHE = 'sip-book-of-presence-v6-1-batch-1-photography';
+const CACHE = 'sip-book-of-presence-v6-2-batch-2-photography';
 const CORE = [
   './',
   './index.html',
@@ -19,6 +19,16 @@ const CORE = [
   './assets/img/08-afterglow.png',
   './assets/img/09-grounded.png',
   './assets/img/10-provision.png',
+  './assets/img/11-green-wisdom.png',
+  './assets/img/12-roots-and-reason.png',
+  './assets/img/13-first-light.png',
+  './assets/img/14-jubilee.png',
+  './assets/img/15-golden-hour.png',
+  './assets/img/16-celebration.png',
+  './assets/img/17-restore.png',
+  './assets/img/18-focus.png',
+  './assets/img/19-balance.png',
+  './assets/img/20-renewal.png',
   './manifest.webmanifest?v=6.1.0'
 ];
 

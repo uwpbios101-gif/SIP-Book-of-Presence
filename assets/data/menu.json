@@ -1,6 +1,6 @@
 {
-  "edition": "Complete 24-Drink Collection · Photography Batch 1",
-  "version": "6.1",
+  "edition": "Complete 24-Drink Collection · Photography Batches 1–2",
+  "version": "6.2",
   "updated": "2026-07-11",
   "notice": "Creative and operational development edition. Prices, final availability, allergens, and dietary indicators require SIP approval before service.",
   "collections": [
@@ -720,7 +720,10 @@
           },
           "containsCaffeine": false,
           "price": null,
-          "availability": "Pending opening-menu approval"
+          "availability": "Pending opening-menu approval",
+          "image": "assets/img/11-green-wisdom.png",
+          "imageAlt": "Green Wisdom zero-proof cocktail with cucumber ribbon, herb leaf, and a tall clear ice spear in a luminous green crystal highball.",
+          "photographyStatus": "Website asset linked"
         },
         {
           "id": "roots-and-reason",
@@ -779,7 +782,10 @@
           },
           "containsCaffeine": false,
           "price": null,
-          "availability": "Pending opening-menu approval"
+          "availability": "Pending opening-menu approval",
+          "image": "assets/img/12-roots-and-reason.png",
+          "imageAlt": "Roots & Reason zero-proof cocktail with ruby botanical tones, clear ice cubes, pomegranate arils, and rosemary in a cut-crystal goblet.",
+          "photographyStatus": "Website asset linked"
         }
       ]
     },
@@ -841,7 +847,10 @@
           },
           "containsCaffeine": false,
           "price": null,
-          "availability": "Pending opening-menu approval"
+          "availability": "Pending opening-menu approval",
+          "image": "assets/img/13-first-light.png",
+          "imageAlt": "First Light zero-proof sparkling cocktail with pale citrus tones, a curled grapefruit ribbon, and a floral herb garnish in a refined flute.",
+          "photographyStatus": "Website asset linked"
         },
         {
           "id": "jubilee",
@@ -895,7 +904,10 @@
           },
           "containsCaffeine": false,
           "price": null,
-          "availability": "Pending opening-menu approval"
+          "availability": "Pending opening-menu approval",
+          "image": "assets/img/14-jubilee.png",
+          "imageAlt": "Jubilee zero-proof sparkling cocktail with rosy strawberry tones and an elegant coupe presentation with a strawberry fan garnish.",
+          "photographyStatus": "Website asset linked"
         },
         {
           "id": "golden-hour",
@@ -949,7 +961,10 @@
           },
           "containsCaffeine": false,
           "price": null,
-          "availability": "Pending opening-menu approval"
+          "availability": "Pending opening-menu approval",
+          "image": "assets/img/15-golden-hour.png",
+          "imageAlt": "Golden Hour zero-proof sparkling cocktail with radiant orange tones, an orange wheel, and a chamomile blossom in a crystal stemmed glass.",
+          "photographyStatus": "Website asset linked"
         },
         {
           "id": "celebration",
@@ -1003,7 +1018,10 @@
           },
           "containsCaffeine": false,
           "price": null,
-          "availability": "Pending opening-menu approval"
+          "availability": "Pending opening-menu approval",
+          "image": "assets/img/16-celebration.png",
+          "imageAlt": "Celebration zero-proof cocktail with deep berry sparkle and a grape skewer garnish in a tall celebratory flute.",
+          "photographyStatus": "Website asset linked"
         }
       ]
     },
@@ -1070,7 +1088,10 @@
           },
           "containsCaffeine": false,
           "price": null,
-          "availability": "Pending opening-menu approval"
+          "availability": "Pending opening-menu approval",
+          "image": "assets/img/17-restore.png",
+          "imageAlt": "Restore zero-proof wellness cocktail with chilled blue-green clarity, a tall ice spear, blueberries, and basil in a crystal highball.",
+          "photographyStatus": "Website asset linked"
         },
         {
           "id": "focus",
@@ -1129,7 +1150,10 @@
           },
           "containsCaffeine": true,
           "price": null,
-          "availability": "Pending opening-menu approval"
+          "availability": "Pending opening-menu approval",
+          "image": "assets/img/18-focus.png",
+          "imageAlt": "Focus zero-proof wellness cocktail with warm pear tones and a fan of pear slices accented by cardamom in an elegant coupe.",
+          "photographyStatus": "Website asset linked"
         },
         {
           "id": "balance",
@@ -1188,7 +1212,10 @@
           },
           "containsCaffeine": false,
           "price": null,
-          "availability": "Pending opening-menu approval"
+          "availability": "Pending opening-menu approval",
+          "image": "assets/img/19-balance.png",
+          "imageAlt": "Balance zero-proof wellness cocktail with amber depth, a large clear ice cube, candied ginger, and citrus peel in a crystal rocks glass.",
+          "photographyStatus": "Website asset linked"
         },
         {
           "id": "renewal",
@@ -1247,7 +1274,10 @@
           },
           "containsCaffeine": false,
           "price": null,
-          "availability": "Pending opening-menu approval"
+          "availability": "Pending opening-menu approval",
+          "image": "assets/img/20-renewal.png",
+          "imageAlt": "Renewal zero-proof wellness cocktail with watermelon color, crushed ice, mint, and a curling watermelon ribbon in a tall crystal glass.",
+          "photographyStatus": "Website asset linked"
         }
       ]
     },
@@ -1483,8 +1513,8 @@
     }
   ],
   "photography": {
-    "status": "Drinks 01–10 photographed",
+    "status": "Drinks 01–20 photographed",
     "imageBasePath": "assets/img/",
-    "nextBatch": "Drinks 11–20"
+    "nextBatch": "Drinks 21–24"
   }
 }
