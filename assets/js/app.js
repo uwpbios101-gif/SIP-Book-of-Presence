@@ -16,22 +16,13 @@
   const searchResults = document.getElementById('searchResults');
   const toast = document.getElementById('toast');
   const mobileReader = document.getElementById('mobileReader');
+  const mobileJump = document.getElementById('mobileJump');
 
-  const labels = ['Cover', 'Welcome', 'Contents', 'House Signatures', 'Presence', 'Clarity', 'Legacy', 'Renaissance', 'The Permanent Four', 'Back Cover'];
-  const searchIndex = [
-    { title: 'The Book of Presence', subtitle: 'Cover', page: 0 },
-    { title: 'Welcome to SIP', subtitle: 'Presence is the product', page: 1 },
-    { title: 'Contents', subtitle: 'The complete journey', page: 2 },
-    { title: 'House Signatures', subtitle: 'Collection I · four permanent compositions', page: 3 },
-    { title: 'Presence', subtitle: 'Blackberry · Assam black tea · charred orange · allspice', page: 4 },
-    { title: 'Clarity', subtitle: 'Green grape · cucumber · white tea · citrus blossom', page: 5 },
-    { title: 'Legacy', subtitle: 'Jamaican sorrel · roasted ginger · pimento · blood orange', page: 6 },
-    { title: 'Renaissance', subtitle: 'Pink guava · passion fruit · hibiscus · lime', page: 7 },
-    { title: 'The Permanent Four', subtitle: 'The complete House Signatures collection', page: 8 },
-    { title: 'SIP South Holland', subtitle: 'Address, phone, and reservations', page: 9 }
-  ];
+  const labels = ["Cover", "Welcome", "Contents", "House Signatures", "Presence", "Clarity", "Legacy", "Renaissance", "Reserve Collection", "The Sovereign", "Midnight Gold", "Quiet Authority", "Afterglow", "Ital Collection", "Grounded", "Provision", "Green Wisdom", "Roots & Reason", "Sparkling Collection", "First Light", "Jubilee", "Golden Hour", "Celebration", "Wellness Elixirs", "Restore", "Focus", "Balance", "Renewal", "Dessert & Seasonal", "Velvet", "Cocoa Ceremony", "Harvest Moon", "Sunday Best", "Choose Your Moment", "Order & Reserve", "Back Cover"];
+  const pageHashes = ["cover", "welcome", "contents", "house-signatures", "presence", "clarity", "legacy", "renaissance", "reserve-collection", "the-sovereign", "midnight-gold", "quiet-authority", "afterglow", "ital-collection", "grounded", "provision", "green-wisdom", "roots-and-reason", "sparkling-collection", "first-light", "jubilee", "golden-hour", "celebration", "wellness-elixirs", "restore", "focus", "balance", "renewal", "dessert-seasonal", "velvet", "cocoa-ceremony", "harvest-moon", "sunday-best", "choose-your-moment", "order-and-reserve", "back-cover"];
+  const navTargets = [0, 0, 2, 3, 3, 3, 3, 3, 8, 8, 8, 8, 8, 13, 13, 13, 13, 13, 18, 18, 18, 18, 18, 23, 23, 23, 23, 23, 28, 28, 28, 28, 28, 33, 34, 34];
+  const searchIndex = [{"title": "Cover", "subtitle": "The complete SIP crafted zero-proof collection", "page": 0}, {"title": "Welcome", "subtitle": "Presence before preference", "page": 1}, {"title": "Contents", "subtitle": "Six collections and twenty-four beverages", "page": 2}, {"title": "House Signatures", "subtitle": "Four permanent compositions that carry the clearest expression of SIP: memorable without excess, generous without noise, and unmistakable from the first sip.", "page": 3}, {"title": "Presence", "subtitle": "Blackberry · Assam Black Tea · Charred Orange · Allspice", "page": 4}, {"title": "Clarity", "subtitle": "Green Grape · Cucumber · Silver Needle White Tea · Citrus Blossom", "page": 5}, {"title": "Legacy", "subtitle": "Jamaican Sorrel · Roasted Ginger · Pimento · Blood Orange · Bay Leaf", "page": 6}, {"title": "Renaissance", "subtitle": "Pink Guava · Passion Fruit · Hibiscus · Lime · Pink Peppercorn", "page": 7}, {"title": "Reserve Collection", "subtitle": "Rare ingredients, measured service, and slower rituals. These compositions reward attention and reveal themselves in chapters rather than all at once.", "page": 8}, {"title": "The Sovereign", "subtitle": "Blackcurrant · Mission Fig · Smoked Tea · Cacao · Verjus", "page": 9}, {"title": "Midnight Gold", "subtitle": "Roasted Pineapple · Saffron · Toasted Coconut · Lime · Black Pepper", "page": 10}, {"title": "Quiet Authority", "subtitle": "Roasted Pear · Oolong · Lemon Verbena · Celery Seed · Lemon", "page": 11}, {"title": "Afterglow", "subtitle": "Blood Orange · Apricot · Rooibos · Sumac · Vanilla", "page": 12}, {"title": "Ital Collection", "subtitle": "Plant-first Caribbean compositions shaped by roots, leaves, fruit, spice, and restraint. Nourishing in spirit, generous in flavor, and alive from first aroma to final sip.", "page": 13}, {"title": "Grounded", "subtitle": "Beet · Carrot · Ginger · Lime · Thyme · Coconut Water", "page": 14}, {"title": "Provision", "subtitle": "Roasted Pineapple · Tamarind · Toasted Breadfruit · Coconut · Nutmeg", "page": 15}, {"title": "Green Wisdom", "subtitle": "Green Apple · Cucumber · Callaloo · Basil · Lime · Coconut Water", "page": 16}, {"title": "Roots & Reason", "subtitle": "Sarsaparilla · Ginger · Turmeric · Chicory · Lime · Blackstrap", "page": 17}, {"title": "Sparkling Collection", "subtitle": "Effervescent compositions designed for arrivals, milestones, and tables that deserve a collective toast. Bright, lifted, and celebratory without becoming sugary.", "page": 18}, {"title": "First Light", "subtitle": "Ruby Grapefruit · White Peach · Lemongrass · Rosemary", "page": 19}, {"title": "Jubilee", "subtitle": "Strawberry · Lychee · Rose · Lemon", "page": 20}, {"title": "Golden Hour", "subtitle": "Mango · Tangerine · Chamomile · Ginger Flower", "page": 21}, {"title": "Celebration", "subtitle": "Concord Grape · Elderflower · Lemon · Thyme", "page": 22}, {"title": "Wellness Elixirs", "subtitle": "Hydration-forward, tea-led, and botanical compositions created for how guests want to feel in the room: clear, replenished, balanced, and fully engaged.", "page": 23}, {"title": "Restore", "subtitle": "Coconut Water · Watermelon · Lime · Mint · Sea Salt", "page": 24}, {"title": "Focus", "subtitle": "Sencha · Blueberry · Lemon · Basil · Ginger", "page": 25}, {"title": "Balance", "subtitle": "Pear · Rooibos · Ginger · Cardamom · Lemon", "page": 26}, {"title": "Renewal", "subtitle": "Tart Cherry · Pomegranate · Rosemary · Lime", "page": 27}, {"title": "Dessert & Seasonal", "subtitle": "Rich, aromatic compositions designed to close the meal with intention. Indulgent without becoming careless, and seasonal without becoming novelty.", "page": 28}, {"title": "Velvet", "subtitle": "Black Cherry · Cold Brew · Vanilla · Cacao · Oat Cream", "page": 29}, {"title": "Cocoa Ceremony", "subtitle": "Cacao · Toasted Coconut · Cinnamon · Orange · Oat Cream", "page": 30}, {"title": "Harvest Moon", "subtitle": "Roasted Apple · Pumpkin · Maple · Sage · Rooibos", "page": 31}, {"title": "Sunday Best", "subtitle": "Roasted Sweet Potato · Chicory · Vanilla · Pecan · Nutmeg", "page": 32}, {"title": "Choose Your Moment", "subtitle": "Browse the collection by mood and occasion", "page": 33}, {"title": "Order & Reserve", "subtitle": "SIP address, phone, website, ordering, and reservations", "page": 34}, {"title": "Back Cover", "subtitle": "SIP South Holland contact information", "page": 35}];
 
-  const pageHashes = ['cover','welcome','contents','house-signatures','presence','clarity','legacy','renaissance','permanent-four','back-cover'];
   const initialHash = window.location.hash.replace('#','').toLowerCase();
   let currentPage = Math.max(0, pageHashes.indexOf(initialHash));
   let soundEnabled = false;
@@ -53,10 +44,11 @@
     prevButton.disabled = currentPage === 0;
     nextButton.disabled = currentPage === labels.length - 1;
 
-    const activeTarget = currentPage === 8 ? 3 : currentPage;
+    const activeTarget = navTargets[currentPage];
     document.querySelectorAll('.chapter-nav button').forEach(btn => {
       btn.classList.toggle('is-active', Number(btn.dataset.go) === activeTarget);
     });
+    if (mobileJump) mobileJump.value = String(activeTarget);
   }
 
   function goTo(page, withSound = true) {
@@ -91,9 +83,8 @@
       const filter = ctx.createBiquadFilter();
       filter.type = 'lowpass'; filter.frequency.value = 1600;
       source.buffer = buffer; source.connect(filter); filter.connect(ctx.destination);
-      source.start();
-      source.onended = () => ctx.close();
-    } catch (_) { /* audio is an enhancement */ }
+      source.start(); source.onended = () => ctx.close();
+    } catch (_) {}
   }
 
   function showToast(message) {
@@ -111,7 +102,7 @@
         <span>${String(item.page + 1).padStart(2,'0')}</span>
         <b>${item.title}</b>
         <small>${item.subtitle}</small>
-      </button>`).join('') : '<p>No matching page in this edition.</p>';
+      </button>`).join('') : '<p>No matching page in this collection.</p>';
   }
 
   function buildMobileReader() {
@@ -135,20 +126,18 @@
       currentPage = Number(visible.target.id.replace('mobile-page-',''));
       shell.dataset.page = String(currentPage);
       pageLabel.textContent = labels[currentPage];
+      if (mobileJump) mobileJump.value = String(navTargets[currentPage]);
     }, { threshold: [0.45,0.7] });
     [...mobileReader.children].forEach(el => observer.observe(el));
   }
 
   nextButton.addEventListener('click', next);
   prevButton.addEventListener('click', prev);
+  mobileJump?.addEventListener('change', event => goTo(event.target.value));
 
   document.addEventListener('click', event => {
     const goButton = event.target.closest('[data-go]');
-    if (goButton) {
-      goTo(goButton.dataset.go);
-      return;
-    }
-    if (event.target.closest('[data-coming]')) showToast('This collection enters in a future production phase.');
+    if (goButton) goTo(goButton.dataset.go);
   });
 
   soundButton.addEventListener('click', () => {
@@ -204,7 +193,7 @@
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', async () => {
       try {
-        const registration = await navigator.serviceWorker.register('./service-worker.js?v=5.0.0');
+        const registration = await navigator.serviceWorker.register('./service-worker.js?v=6.0.0');
         registration.update();
       } catch (_) {}
     });

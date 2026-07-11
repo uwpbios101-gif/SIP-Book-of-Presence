@@ -1,15 +1,15 @@
-const CACHE = 'sip-book-of-presence-v5-complete-house-signatures';
+const CACHE = 'sip-book-of-presence-v6-complete-24-drinks';
 const CORE = [
   './',
   './index.html',
-  './assets/css/styles.css?v=5.0.0',
-  './assets/js/app.js?v=5.0.0',
+  './assets/css/styles.css?v=6.0.0',
+  './assets/js/app.js?v=6.0.0',
   './assets/img/sip-logo.png',
   './assets/img/promotion-ambient.jpg',
   './assets/img/girls-night-ambient.jpg',
   './assets/img/family-ambient.jpg',
   './assets/data/menu.json',
-  './manifest.webmanifest?v=5.0.0'
+  './manifest.webmanifest?v=6.0.0'
 ];
 
 self.addEventListener('install', event => {
