@@ -1,0 +1,15 @@
+SIP BOOK OF PRESENCE — PUSH TO GITHUB
+======================================
+
+1. Extract the ZIP.
+2. Open this local repository folder:
+   C:\Users\mkepr\Documents\GitHub\SIP-Book-of-Presence
+3. Copy every file and folder from the extracted package into that folder.
+4. Make sure index.html is at the top level.
+5. Open GitHub Desktop.
+6. Summary: Add Presence house signature website
+7. Click Commit to main.
+8. Click Push origin.
+
+Expected live URL after GitHub Pages is enabled:
+https://uwpbios101-gif.github.io/SIP-Book-of-Presence/

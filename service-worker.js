@@ -1,4 +1,4 @@
-const CACHE = 'sip-book-of-presence-v1';
+const CACHE = 'sip-book-of-presence-v2-presence';
 const ASSETS = [
   './',
   './index.html',

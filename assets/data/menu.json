@@ -1,42 +1,72 @@
 {
-  "edition": "Prototype 01",
+  "edition": "House Signatures · Presence",
   "updated": "2026-07-11",
-  "notice": "Concept content only. Final recipes, prices, dietary indicators, and availability require SIP approval.",
+  "notice": "Public menu content. Prices, availability, and dietary indicators remain to be added after operational approval.",
   "collections": [
     {
       "id": "house-signatures",
       "name": "House Signatures",
-      "description": "The permanent icons of SIP.",
+      "description": "Permanent compositions that carry the clearest expression of SIP.",
       "drinks": [
         {
           "id": "presence",
           "name": "Presence",
           "number": "01",
-          "identity": "Dark fruit. Burnished spice. Smoked citrus.",
-          "description": "A slow, architectural composition designed to arrive quietly and remain in memory.",
+          "tagline": "Depth without darkness.",
+          "menuLine": "Blackberry · Black Tea · Charred Orange · Allspice",
+          "description": "Blackberry and black tea unfold through charred orange and warm allspice, then resolve into a dry mineral finish. Rich at first, composed from beginning to end.",
+          "closingLine": "Stay for the moment. Remember the night.",
           "status": "House Icon",
-          "prototype": true,
-          "tastingDirection": ["blackberry", "allspice", "black tea", "charred orange"],
-          "pairingDirection": ["jerk-spiced vegetables", "roasted mushroom", "dark cacao"],
-          "profile": { "sweetness": 2, "citrus": 3, "herbal": 4, "body": 5 }
+          "publicIngredients": [
+            "Blackberry–allspice cordial",
+            "Chilled Assam black tea",
+            "Fresh lemon",
+            "Charred-orange oleo syrup",
+            "Alcohol-free aromatic bitters",
+            "Sparkling mineral water",
+            "Smoked sea-salt solution"
+          ],
+          "glassware": "Heavy crystal rocks glass",
+          "ice": "One large hand-cut clear cube",
+          "garnish": "Thin charred-orange crescent and one ripe blackberry on a minimal gold pick",
+          "experience": {
+            "aroma": "Burnt orange, blackberry, gentle spice",
+            "firstImpression": "Dark fruit and polished citrus",
+            "midPalate": "Structured black tea and allspice warmth",
+            "finish": "Dry, mineral, faintly smoky",
+            "mood": "Grounded, mature, assured"
+          },
+          "pairing": "Charred jerk mushrooms with roasted plantain and tamarind glaze",
+          "profile": {
+            "sweetness": 2.5,
+            "citrus": 3,
+            "herbal": 2,
+            "body": 4,
+            "effervescence": 2
+          },
+          "price": null,
+          "availability": "Coming with SIP opening menu"
         },
         {
           "id": "clarity",
           "name": "Clarity",
           "number": "02",
-          "prototype": true
+          "direction": "Green grape · cucumber · white tea · citrus blossom",
+          "status": "In development"
         },
         {
           "id": "legacy",
           "name": "Legacy",
           "number": "03",
-          "prototype": true
+          "direction": "Sorrel · ginger · pimento · citrus · aromatic spice",
+          "status": "In development"
         },
         {
           "id": "renaissance",
           "name": "Renaissance",
           "number": "04",
-          "prototype": true
+          "direction": "Guava · passion fruit · hibiscus · lime · gentle spice",
+          "status": "In development"
         }
       ]
     }

@@ -285,3 +285,21 @@ meter::-moz-meter-bar { background:linear-gradient(90deg,#9a691e,#d9ad56); }
   .back { transform:none!important; }
   .mobile-reader { display:none!important; }
 }
+
+/* Presence edition refinements */
+.drink-copy { overflow:auto; scrollbar-width:none; }
+.drink-copy::-webkit-scrollbar { display:none; }
+.profile { gap:8px; }
+.profile>div { grid-template-columns:92px 1fr; }
+@media (min-width:761px) and (max-height:900px) {
+  .drink-copy { padding-top:7%; padding-bottom:5%; }
+  .drink-page h2 { font-size:clamp(48px,4.6vw,82px); }
+  .drink-description { line-height:1.5; }
+  .profile { margin:5% 0; }
+  .drink-details { gap:8px; }
+  .drink-details div { padding-top:7px; }
+}
+@media (max-width:760px) {
+  .mobile-page .drink-description { font-size:15px; line-height:1.65; }
+  .mobile-page .profile>div { grid-template-columns:110px 1fr; }
+}

@@ -24,7 +24,7 @@
     { title: 'Welcome to SIP', subtitle: 'Presence is the product', page: 1 },
     { title: 'Contents', subtitle: 'The complete journey', page: 2 },
     { title: 'House Signatures', subtitle: 'Collection I', page: 3 },
-    { title: 'Presence', subtitle: 'House Signature · No. 01', page: 4 },
+    { title: 'Presence', subtitle: 'Blackberry · black tea · charred orange · allspice', page: 4 },
     { title: 'SIP South Holland', subtitle: 'Address, phone, and reservations', page: 5 }
   ];
 
